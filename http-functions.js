@@ -13,7 +13,7 @@ module.exports = function getHTML(options, callback) {
 
     response.on('end', function() {
       console.log('Response stream complete.');
-      console.log(chunk);
+      callback(chunk);
     });
 
   });
